@@ -1,0 +1,32 @@
+<div class="container">
+    <form (ngSubmit)="registrarse(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" class="form-control" id="username" name="username" [(ngModel)]="registry.username" aria-describedby="usernameHelp">
+          <small id="usernameHelp" class="form-text text-muted">Introduce tu nombre de usuario</small>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" name="password" [(ngModel)]="registry.password" class="form-control" id="password">
+        </div>
+        <div class="form-group">
+            <label for="passwordConfirm">Confirmar contraseña</label>
+            <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" [(ngModel)]="registry.passwordConfirm">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="registry.email">
+        </div>
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="registry.name" aria-describedby="nameHelp">
+            <small id="nameHelp" class="form-text text-muted">Introduce tu nombre</small>
+          </div>
+        <div class="form-group">
+            <label for="surname">Apellidos</label>
+            <input type="text" class="form-control" id="surname" name="surname" [(ngModel)]="registry.surname" aria-describedby="surnameHelp">
+            <small id="surnameHelp" class="form-text text-muted">Introduce tus apellidos</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button><span class="text-danger">    {{ errorMessage }}</span>
+    </form>
+</div>

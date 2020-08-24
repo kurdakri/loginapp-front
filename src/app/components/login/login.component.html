@@ -1,0 +1,14 @@
+<div class="container">
+    <form (ngSubmit)="acceder(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" class="form-control" id="username" name="username" [(ngModel)]="login.username" aria-describedby="usernameHelp">
+          <small id="usernameHelp" class="form-text text-muted">Introduce tu nombre de usuario</small>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" name="password" [(ngModel)]="login.password" class="form-control" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button><span class="text-danger">   {{ errorMessage }}</span>
+    </form>
+</div>

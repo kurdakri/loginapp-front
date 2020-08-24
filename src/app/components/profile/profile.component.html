@@ -1,0 +1,18 @@
+<div class="container justify-content-md-center">
+    <div *ngIf="!errorMessage" class="card" style="width: 18rem;">
+        <div class="card-header">
+          Info del usuario
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{ nombre }}</li>
+          <li class="list-group-item">{{ apellidos }}</li>
+          <li class="list-group-item">{{ email }}</li>
+          <li class="list-group-item">{{ nombreUsuario }}</li>
+          <li class="list-group-item">{{ estado }}</li>
+          <li class="list-group-item">{{ fecha }}}</li>
+        </ul>
+    </div>
+    <div *ngIf="errorMessage">
+      <h1>{{ errorMessage }}</h1>
+    </div>
+</div>
